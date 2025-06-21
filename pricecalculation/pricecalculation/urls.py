@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from django.urls import path
+from .views import CalculatePriceView
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('calculate-price/', CalculatePriceView.as_view(), name='calculate-price'),
 ]
